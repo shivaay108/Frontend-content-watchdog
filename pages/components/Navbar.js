@@ -1,19 +1,32 @@
 import Link from "next/link";
 import React from "react";
+import Logo from "./Logo";
+
+
+const CustomLink=({href,title,className=""})=>{
+  return(
+    <Link href={href} className={`${className} relative group`}>
+      {title}
+      {/* <span className="h-[1px] inline-block w-0 bg-light absolute left-0 -bottom-0.5 group-hover:w-full">&nbsp;</span> */}
+    </Link>
+  )
+}
 
 const NavBar = () => {
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
-      <h2>Logo</h2>
+    <header className=" bg-dark w-full px-8 py-4 text-lg text-white	 font-medium flex items-center justify-between">
+      <Logo/>
       <nav>
-        <Link href="/">Home</Link>
-        <Link href="/">Pricing</Link>
-        <Link href="/">ContactUs</Link>
-        <Link href="/">Login</Link>
+        <CustomLink href="/" title="Home" className="mr-6"/>
+        <CustomLink href="/" title="Pricing" className="mx-6"/>
+        <CustomLink href="/" title="Contact" className="mx-6"/>
+        <CustomLink href="/" title="Login" className="ml-6"/>
+       
       </nav>
-      <nav>
-        <Link href="/">Dark</Link>
-      </nav>
+      
+     
+      <nav><CustomLink href="/" title="Get Started" className="px-2 py-4 rounded-full border border-2 border-white hover:border-black hover:bg-white hover:text-black"></CustomLink></nav>
+      
     </header>
   );
 };
