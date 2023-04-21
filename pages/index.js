@@ -11,8 +11,13 @@ export default function Home() {
       </Head>
       <main className='flex items-center text-white w-full min-h-screen'>
         <Layout>
-          <div className='flex items-center justify-center w-full  font-bold '>
-            <span className='text-8xl'> Content-Watch-Dog</span>
+          <div className='flex items-center justify-center w-full text-8xl font-medium '>
+          Content Watchdog
+          
+          </div>
+          <br/>
+          <div className='flex items-center justify-center w-full text-xl font-medium '>
+          Safeguard Your Content!-Keeping NSFW in Check!
           </div>
         </Layout>
       </main>

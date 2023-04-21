@@ -16,9 +16,7 @@ module.exports = {
       fontFamily: {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
-      animation: {
-        text: 'text 5s ease infinite',
-      },
+      
       colors:{
         dark: "#1b1b1b",
         light: "#f5f5f5",

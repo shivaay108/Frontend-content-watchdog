@@ -15,22 +15,12 @@ const CustomLink=({href,title,className=""})=>{
 const NavBar = () => {
   return (
     <header className=" bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
+      <Logo/>
       <nav>
-<<<<<<< HEAD
         <CustomLink href="/" title="Home" className="mr-6"/>
         <CustomLink href="/pricing" title="Pricing" className="mx-6"/>
         <CustomLink href="/contact" title="Contact" className="mx-6"/>
         <CustomLink href="/login" title="Login" className="ml-6"/>
-=======
-        <Logo/>
-      </nav>
-      <nav>
-        <CustomLink href="/" title="Home" className="mr-6 hover:text-white hover:text-xl"/>
-        <CustomLink href="/" title="Pricing" className="mx-6 hover:text-white hover:text-xl"/>
-        <CustomLink href="/" title="Demo" className="mx-6 hover:text-white hover:text-xl"/>
-        <CustomLink href="/" title="Contact" className="mx-6 hover:text-white hover:text-xl"/>
-       
->>>>>>> 51b13b30336d31cae96c326b288754243b5c547a
        
       </nav>
       
