@@ -18,9 +18,9 @@ const NavBar = () => {
       <Logo/>
       <nav>
         <CustomLink href="/" title="Home" className="mr-6"/>
-        <CustomLink href="/" title="Pricing" className="mx-6"/>
-        <CustomLink href="/" title="Contact" className="mx-6"/>
-        <CustomLink href="/" title="Login" className="ml-6"/>
+        <CustomLink href="/pricing" title="Pricing" className="mx-6"/>
+        <CustomLink href="/contact" title="Contact" className="mx-6"/>
+        <CustomLink href="/login" title="Login" className="ml-6"/>
        
       </nav>
       

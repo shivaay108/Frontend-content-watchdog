@@ -3,6 +3,7 @@ const Calculator = () => {
     const [textAmount , newTextAmount] = useState(0);
     const [imageAmount , newImageAmount] = useState(0);
     const [videoAmount , newVideoAmount] = useState(0);
+    const totalAmount = textAmount + imageAmount + videoAmount;
     const textAmountInputHandler = (event) => {
       newTextAmount(event.target.value * 1.5);
     }
@@ -12,31 +13,38 @@ const Calculator = () => {
     const videoAmountInputHandler = (event) => {
       newVideoAmount(event.target.value * 3);
     }
-    const buttonClickHandler = (event) => {
-      const totalAmount = textAmount + imageAmount + videoAmount;
-      return totalAmount;
+    if(textAmount < 0 || imageAmount < 0 || videoAmount < 0){
+      alert("Please enter a valid amount")
+      newTextAmount(0);
+      newImageAmount(0);
+      newVideoAmount(0);
+    }
+    const validateAmount = (event) => {
+      if(textAmount + videoAmount + imageAmount < 100){
+        alert("Total Amount should be more than 100")
+      }
+      else{
+        alert("You are good to pay")
+      }
     }
   return(
         <>
-        <div>
-          <h1 className="text-center"> Pricing </h1>
-        </div>
+       
         
-        <div className="text-center">
-            <h3>Enter No of Text requests : </h3>
-            <input onChange={textAmountInputHandler} type="number" placeholder="Enter no of requests" min="0"/>        
+        <div className="text-center ">
+            <h3>No of Text requests : <span> <input onChange={textAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*1.5</span></h3>
+           
+            
             {/* <p>{textAmount}</p> */}
         <div>
-          <h3>Enter No of Image requests : </h3>
-          <input onChange = {imageAmountInputHandler}  type="number" placeholder="Enter no of requests" min="0"/>   
+          <h3>No of Image requests : <span><input onChange = {imageAmountInputHandler}  type="number" placeholder="No of requests" min="0"/>   </span><span>*2</span> </h3>
+          
         </div>
         <div>
-          <h3>Enter No of Video requests : </h3>
-          <input  onChange={videoAmountInputHandler} type="number" placeholder="Enter no of requests" min="0"/>   
-          {/* <p>{videoAmount}</p> */}
+          <h3>No of Video requests : <span><input  onChange={videoAmountInputHandler} type="number" placeholder="No of requests" min="0"/>   </span> <span>*3</span></h3>
         </div>
         <div className="text-center">
-            <button onClick={buttonClickHandler}>Total Amount : {textAmount + videoAmount + imageAmount}</button>
+          <button onClick={validateAmount} className="border-dashed border-black" >Check Amount</button>  <strong>Total Amount : {textAmount + videoAmount + imageAmount}</strong>
         </div>
         </div>
         </>
