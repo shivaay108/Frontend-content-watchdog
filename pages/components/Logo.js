@@ -11,17 +11,15 @@ const Logo = () => {
     <div className="flex items-center justify-center mt-2">
       <MotionLink
         href="/"
-        className="w-16 h-16 items-center justify-center rounded-full"
+        className="w-14 h-14 items-center justify-center rounded-full"
         whileHover={{
           backgroundColor: [
-            "#121212",
-            "rgba(131,58,180,1)",
-            "rgba(253,29,29,1)",
-            "rgba(252,176,69,1)",
-            "rgba(131,58,180,1)",
-            "#121212",
+           
+            "rgba(0,0,0)",
+            "#79828d",
+            
           ],
-          transition: { duration: 1, repeat: Infinity },
+          transition: { duration: 1, repeat: 2 },
         }}
       >
         <Image src={LogoImg} alt="Logo" width={900} height={900} />
