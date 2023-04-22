@@ -27,7 +27,7 @@ const NavBar = () => {
       </nav>
       
      
-      <nav><CustomLink href="/" title="Get Started" className="font-bold px-2 py-4 rounded-full  border-2 border-white hover:border-black hover:bg-white hover:text-black"></CustomLink></nav>
+      <nav><CustomLink href="/getStarted" title="Get Started" className="font-bold px-2 py-4 rounded-full  border-2 border-white hover:border-black hover:bg-white hover:text-black"></CustomLink></nav>
       
     </header>
   );
