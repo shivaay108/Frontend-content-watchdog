@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from './components/Layout'
-
+import Content from './components/Content'
 export default function Home() {
   return (
     
@@ -17,7 +17,9 @@ export default function Home() {
            
             <p className='mt-4 text-xl'>Safeguard Your Content with Content Watchdog API - Keeping NSFW in Check!</p>
           </div>
+        <Content/>  
         </Layout>
+      
       </main>
 
     </>

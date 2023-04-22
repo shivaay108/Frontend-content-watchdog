@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="bg-white p-8 rounded shadow-md">
-        <h1 className="text-2xl font-bold mb-4 font-black" >Log in</h1>
+        <h1 className="text-2xl text-black font-bold" >Log in</h1>
         <form>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2" htmlFor="username">
