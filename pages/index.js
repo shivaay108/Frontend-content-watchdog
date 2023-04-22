@@ -11,8 +11,9 @@ export default function Home() {
       </Head>
       <main className='flex items-center text-white w-full min-h-screen'>
         <Layout>
-          <div className='flex items-center justify-center w-full  font-bold '>
-            <span className='text-8xl'> Content-Watch-Dog</span>
+          <div className='text-center text-8xl'>
+            <span class='title-word title-word-1'>Content</span>
+            <span class='title-word title-word-2'>WatchDog</span>
           </div>
         </Layout>
       </main>

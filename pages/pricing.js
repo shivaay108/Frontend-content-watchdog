@@ -32,19 +32,20 @@ const Calculator = () => {
        
         
         <div className="text-center ">
-            <h3>No of Text requests : <span> <input onChange={textAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*1.5</span></h3>
+            <h3>No of Text requests : <span> <input className="" onChange={textAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*1.5</span></h3>
            
-            
+            <br></br>
             {/* <p>{textAmount}</p> */}
         <div>
-          <h3>No of Image requests : <span><input onChange = {imageAmountInputHandler}  type="number" placeholder="No of requests" min="0"/>   </span><span>*2</span> </h3>
-          
+          <h3>No of Image requests : <span><input classname="" onChange = {imageAmountInputHandler}  type="number" placeholder="No of requests" min="0"/>   </span><span>*2</span> </h3>
+          <br></br>
         </div>
         <div>
           <h3>No of Video requests : <span><input  onChange={videoAmountInputHandler} type="number" placeholder="No of requests" min="0"/>   </span> <span>*3</span></h3>
+        <br></br>
         </div>
         <div className="text-center">
-          <button onClick={validateAmount} className="border-dashed border-black" >Check Amount</button>  <strong>Total Amount : {textAmount + videoAmount + imageAmount}</strong>
+          <button onClick={validateAmount}>Check Amount</button>  <strong>Total Amount : {textAmount + videoAmount + imageAmount}</strong>
         </div>
         </div>
         </>
