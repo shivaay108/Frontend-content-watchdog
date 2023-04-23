@@ -17,17 +17,17 @@ const NavBar = () => {
     <header className=" bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
       <Logo/>
       
-      <nav>
+      <nav className>
         <CustomLink href="/" title="Home" className="mr-6 hover:text-white hover:text-xl"/>
         <CustomLink href="/pricing" title="Pricing" className="mx-6 hover:text-white hover:text-xl"/>
-        <CustomLink href="/" title="Demo" className="mx-6 hover:text-white hover:text-xl"/>
-        <CustomLink href="/" title="Contact" className="mx-6 hover:text-white hover:text-xl"/>
+        <CustomLink href="/demo" title="Demo" className="mx-6 hover:text-white hover:text-xl"/>
+        <CustomLink href="/contactus" title="Contact" className="mx-6 hover:text-white hover:text-xl"/>
        
        
       </nav>
       
-     
-      <nav><CustomLink href="/login" title="Get Started" className="font-bold px-2 py-4 rounded-full  border-2 border-white hover:border-black hover:bg-white hover:text-black"></CustomLink></nav>
+     <nav> <CustomLink href="/login" title="Get Started" className="font-bold px-2 py-4 rounded-full  border-2 border-white hover:border-black hover:bg-white hover:text-black"></CustomLink></nav>
+      
       
     </header>
   );

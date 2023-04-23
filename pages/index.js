@@ -15,7 +15,8 @@ export default function Home() {
             <span className='title-word title-word-1 text-8xl font-bold'>Content-</span>
             <span className='title-word title-word-2 text-8xl font-bold'>WatchDog</span>
            
-            <p className='mt-4 text-xl'>Safeguard Your Content with Content Watchdog API - Keeping NSFW in Check!</p>
+            <p className='mt-4 text-xl underline'>Safeguard Your Content with Content Watchdog API - Keeping NSFW in Check!</p>
+            
           </div>
         <Content/>  
         </Layout>
