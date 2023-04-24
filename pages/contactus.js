@@ -57,7 +57,7 @@ const Form = () => {
         </div>
         <button
           type="submit"
-          className="bg-indigo-500 text-white py-2 px-4 rounded-md w-full font-medium hover:bg-indigo-600"
+          className="bg-black text-white py-2 px-4 rounded-md w-full font-medium hover:bg-gray-800"
         >
           Submit
         </button>
