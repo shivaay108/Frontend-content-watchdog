@@ -2,7 +2,6 @@ import '@/styles/globals.css'
 import {Montserrat} from "next/font/google"
 import Head from 'next/head'
 import React from 'react';
-import { Box } from '@mui/material';
 
 import NavBar from './components/Navbar'
 import '../styles/styles.css'

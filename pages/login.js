@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Login() {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen bg-gray-300">
       <div className="bg-white p-8 rounded shadow-md">
-        <h1 className="text-2xl text-black font-bold" >Log in</h1>
+        <h1 className="text-2xl text-gray-800 font-bold text-center m-4" >Log in</h1>
         <form>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2" htmlFor="username">
@@ -15,6 +15,7 @@ export default function Login() {
               id="username"
               type="text"
               placeholder="Username"
+              required="true"
             />
           </div>
           <div className="mb-6">
@@ -26,13 +27,13 @@ export default function Login() {
               id="password"
               type="password"
               placeholder="********"
+              required="true"
             />
           </div>
           <div className="flex items-center justify-between">
-            <button
+            <button 
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
+              type="button" >
               Sign In
             </button>
             <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
