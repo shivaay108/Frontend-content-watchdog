@@ -3,14 +3,14 @@
 }
 
 .title-word-1 {
-  --color-1: #53d3df;
-  --color-2: #3D8DAE;
+  --color-1: #3c6568;
+  --color-2: #406271;
   --color-3: #2e3b3e;
 }
 
 .title-word-2 {
   --color-1: #2d567167;
-  --color-2: #ACCFCB;
+  --color-2: #383f48;
   --color-3: #17494D;
 }
 @keyframes color-animation {
