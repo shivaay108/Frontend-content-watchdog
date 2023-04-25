@@ -14,10 +14,10 @@ const CustomLink=({href,title,className=""})=>{
 
 const NavBar = () => {
   return (
-    <header className=" bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
+    <header className="bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
       <Logo/>
       
-      <nav className>
+      <nav>
         <CustomLink href="/" title="Home" className="mr-6 hover:text-white hover:text-xl"/>
         <CustomLink href="/pricing" title="Pricing" className="mx-6 hover:text-white hover:text-xl"/>
         <CustomLink href="/demo" title="Demo" className="mx-6 hover:text-white hover:text-xl"/>
