@@ -29,28 +29,33 @@ const Calculator = () => {
     }
   return(
        
-        <div className="flex justify-center items-center h-screen bg-cover bg-blur-lg bg-center bg-gray-300 ">
-        <div className="text-center">
+        <div className="flex justify-center items-center h-screen bg-cover bg-blur-lg bg-center bg-gray-300">
+        <div className="text-center bg-white rounded-lg p-8">
         
-            <h3 className="text-gray-900"> Text requests :<span> <input className="text-gray-900" onChange={textAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*1.5</span></h3>
-           
+            <h3 className="text-gray-900 font-bold mb-4 text-lg"> Text requests :<span> <input className="text-gray-900" onChange={textAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*1.5</span></h3>
+          <div/>
             <br></br>
             {/* <p>{textAmount}</p> */}
-        <div>
-          <h3 className="text-gray-900">Image requests : <span><input className="text-gray-950" onChange = {imageAmountInputHandler}  type="number" placeholder="No of requests" min="0"/>   </span><span>*2</span> </h3>
-          <br></br>
-        </div>
-        <div>
-          <h3 className="text-gray-900">Video requests : <span><input  className="text-gray-950" onChange={videoAmountInputHandler} type="number" placeholder="No of requests" min="0"/>   </span> <span>*3</span></h3>
-        <br></br>
-        </div>
+            {/* <h3 className="text-gray-900 font-bold mb-4 text-lg">Text requests:</h3> */}
+        {/* <div className="flex justify-between mb-4">
+        
+          <span className="text-gray-900 ml-4 text-sm"></span>
+        
+        </div> */}
+         <h3 className="text-gray-900 font-bold mb-4 text-lg"> Image requests :<span> <input className="text-gray-900" onChange={imageAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*2</span></h3>
+        
+        
+        <h3 className="text-gray-900 font-bold mb-4 text-lg"> Video requests :<span> <input className="text-gray-900" onChange={videoAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*</span>2</h3>
         <div className="text-center">
-           <strong className="text-gray-900">Total Amount : INR {textAmount + videoAmount + imageAmount}</strong>
+          <div/>
+          <strong className="text-gray-900 font-bold mb-4 block">
+            Total Amount: INR {textAmount + videoAmount + imageAmount} </strong>
            <br></br>
-           <button onClick={validateAmount} className=" m-5 border-2 border-white hover:border-black hover:bg-white hover:text-black font-bold px-2 py-2 rounded-full ">Checkout</button> 
+           <button onClick={validateAmount} className=" m-5 border-2 border-black text-gray-900 hover:border-gray-950 hover:bg-white hover:text-black font-bold px-2 py-2 rounded-full ">Checkout</button> 
         </div>
         </div>
         </div>
+        
     )
 }
 
