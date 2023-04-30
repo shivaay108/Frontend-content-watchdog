@@ -1,8 +1,13 @@
+import React from "react";
+import Backdrop from "./components/Modals/Backdrop";
+import Checkout from "./components/Modals/Checkout";
+
 import { useState } from "react"
 const Calculator = () => {
     const [textAmount , newTextAmount] = useState(0);
     const [imageAmount , newImageAmount] = useState(0);
     const [videoAmount , newVideoAmount] = useState(0);
+    const [modalState , setModalState] = useState(false);
     const totalAmount = textAmount + imageAmount + videoAmount;
     const textAmountInputHandler = (event) => {
       newTextAmount(event.target.value * 1.5);
@@ -19,14 +24,19 @@ const Calculator = () => {
       newImageAmount(0);
       newVideoAmount(0);
     }
-    const validateAmount = (event) => {
+    const ModalWindow = (event) => {
       if(textAmount + videoAmount + imageAmount < 100){
         alert("Total Amount should be more than 100")
       }
       else{
-        alert("You are good to pay")
+        setModalState(true);
       }
-    }
+     setModalState(false)
+     
+     const GetBackHandler = () => {
+      setModalState(false);
+     }
+      }
   return(
        
         <div className="flex justify-center items-center h-screen bg-cover bg-blur-lg bg-center bg-gray-300">
@@ -45,13 +55,17 @@ const Calculator = () => {
          <h3 className="text-gray-900 font-bold mb-4 text-lg"> Image requests :<span> <input className="text-gray-900" onChange={imageAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*2</span></h3>
         
         
-        <h3 className="text-gray-900 font-bold mb-4 text-lg"> Video requests :<span> <input className="text-gray-900" onChange={videoAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*</span>2</h3>
+        <h3 className="text-gray-900 font-bold mb-4 text-lg"> Video requests :<span> <input className="text-gray-900" onChange={videoAmountInputHandler} type="number" placeholder="No of requests" min="0"/></span><span>*</span>3</h3>
         <div className="text-center">
           <div/>
           <strong className="text-gray-900 font-bold mb-4 block">
             Total Amount: INR {textAmount + videoAmount + imageAmount} </strong>
            <br></br>
-           <button onClick={validateAmount} className=" m-5 border-2 border-black text-gray-900 hover:border-gray-950 hover:bg-white hover:text-black font-bold px-2 py-2 rounded-full ">Checkout</button> 
+           <button onClick={ModalWindow} className=" m-5 border-2 border-black text-gray-900 hover:border-gray-950 hover:bg-white hover:text-black font-bold px-2 py-2 rounded-full ">Checkout</button> 
+            {modalState && (
+              <Checkout totalAmount = {textAmount + videoAmount + imageAmount}/>
+            )}
+            {modalState && <Backdrop OnCancel= {GetBackHandler}/>}
         </div>
         </div>
         </div>
