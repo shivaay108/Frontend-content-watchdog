@@ -31,7 +31,7 @@ const Calculator = () => {
       else{
         setModalState(true);
       }
-     setModalState(false)
+     
      
      const GetBackHandler = () => {
       setModalState(false);
@@ -59,13 +59,13 @@ const Calculator = () => {
         <div className="text-center">
           <div/>
           <strong className="text-gray-900 font-bold mb-4 block">
-            Total Amount: INR {textAmount + videoAmount + imageAmount} </strong>
+            Total Amount: INR {totalAmount} </strong>
            <br></br>
            <button onClick={ModalWindow} className=" m-5 border-2 border-black text-gray-900 hover:border-gray-950 hover:bg-white hover:text-black font-bold px-2 py-2 rounded-full ">Checkout</button> 
             {modalState && (
               <Checkout totalAmount = {textAmount + videoAmount + imageAmount}/>
             )}
-            {modalState && <Backdrop OnCancel= {GetBackHandler}/>}
+            {modalState && <Backdrop/>}
         </div>
         </div>
         </div>
