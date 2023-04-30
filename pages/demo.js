@@ -16,7 +16,7 @@ const demo = () => {
       <div class="mb-4">
         <label for="text" class="block font-medium mb-2">Upload Text:</label>
         <div class="flex items-center">
-          <input type="text" class="w-full px-4 py-2 rounded-md border border-gray-400 mr-2" id="text"/>
+          <input type="text" placeholder='text here' class="w-full px-4 py-2 text-black rounded-md border border-gray-400 mr-2" id="text"/>
           <span class="font-medium text-gray-600">or</span>
           <input type="file" class="ml-2" id="file" />
         </div>
