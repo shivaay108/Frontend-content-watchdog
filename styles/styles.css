@@ -1,5 +1,6 @@
 .title-word {
-  animation: color-animation 4s forwards infinite;
+  animation: color-animation 3s forwards infinite;
+  transition: color 0.3s ease-out;
 }
 
 .title-word-1 {
@@ -13,13 +14,19 @@
   --color-2: #383f48;
   --color-3: #17494D;
 }
-@keyframes color-animation {
+/* @keyframes color-animation {
   0%    {color: var(--color-1)}
   32%   {color: var(--color-1)}
   33%   {color: var(--color-2)}
   65%   {color: var(--color-2)}
   66%   {color: var(--color-3)}
   99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+} */
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
   100%  {color: var(--color-1)}
 }
 .container {
